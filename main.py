@@ -38,7 +38,7 @@ def train(epoch):
             epo_loss += iter_loss
             optimizer.step()
             print("epoch:{}/{},batch:{},loss:{:.6f}".format(i+1,epoch,batch,loss.item()))
-        if (i+1)%1==0:
+        if (i+1)%20==0:
             torch.save(net, save_path+"/checkpoints/trained_model_{}.pkt".format(i+1))
             epo_losses.append(epo_loss)    
         scheduler.step(epo_loss)
@@ -100,13 +100,6 @@ if __name__=='__main__':
     test(100)
 
 
-# In[11]:
-
-
-
-
-
-# In[ ]:
 
 
 
