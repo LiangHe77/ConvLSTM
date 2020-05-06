@@ -153,6 +153,6 @@ if __name__=='__main__':
             epo_loss += iter_loss
             optimizer.step()
             print("epoch:{}/{},batch:{},loss:{}".format(i+1,10,batch,loss.item()))
-    print(encoder)
+    
     torch.save(encoder,save_path+"/checkpoints/encoder.pkl")
     torch.save(decoder,save_path+"/checkpoints/decoder.pkl")
