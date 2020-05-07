@@ -96,7 +96,6 @@ class Model(nn.Module):
         return init_states   
 
     
-
 class Encoder(nn.Module):
     def __init__(self):
         super(Encoder,self).__init__()
